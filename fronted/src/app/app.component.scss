@@ -1,0 +1,50 @@
+.topnav {
+  background-color: rgba($color: #333, $alpha: 0.4);
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  height: 10vh;
+  align-items: center;
+}
+
+.menu-cabecera {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.btn-primary {
+  border: none;
+  background-color: white;
+  padding: .5rem;
+  border-radius: 2rem;
+}
+
+.bg-danger {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  border-radius: 2rem;
+  margin-left: 0.5rem;
+}

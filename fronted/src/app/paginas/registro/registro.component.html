@@ -1,0 +1,23 @@
+<div class="contenido">
+    <a href="" (click)="abrirPopup($event)">Nuevo Producto</a>
+
+    <div class="contenedor-productos">
+        <div *ngFor="let producto of listaDeProductos; trackBy: trackById" class="producto-item">
+            <app-producto [producto]="producto"></app-producto>
+        </div>
+      
+        <div *ngIf="listaDeProductos.length === 0">
+            <p>No existen productos</p>
+        </div>
+    </div>
+
+    <app-popup-producto
+        *ngIf="mostrarPopup"
+        (productoAgregado)="agregarProducto($event)"
+        (cerrarPopup)="cerrarPopup()">
+    </app-popup-producto>
+
+    <div *ngIf="mostrarMensajeExitoso" class="mensaje-exitoso">
+        Producto agregado exitosamente!
+    </div>
+</div>

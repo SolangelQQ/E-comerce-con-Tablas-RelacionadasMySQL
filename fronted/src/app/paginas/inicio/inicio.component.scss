@@ -1,0 +1,30 @@
+#baner-principal {
+    background-image: url('https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-attachment: fixed;
+  }
+
+h1 {
+    font-size: 10vh;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+.contenedor-productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.producto-item {
+    width: 40vh;
+    
+}

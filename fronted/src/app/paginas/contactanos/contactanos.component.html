@@ -1,0 +1,31 @@
+<h1>Contáctanos</h1>
+<p>¿Tienes alguna pregunta o necesitas más información? ¡Ponte en contacto con nosotros y estaremos encantados de ayudarte!</p>
+
+<div class="contacto">
+    <section>
+        <h2>Correo Electrónico</h2>
+        <p>Envíanos un correo a y nos pondremos en contacto contigo a la brevedad.</p>
+    </section>
+    <section>
+        <h2>Teléfono</h2>
+        <p>Llámanos al +1 (234) 567-890 y con gusto atenderemos tus consultas.</p>
+    </section>
+</div>
+
+<div class="ubicacion">
+    <h2>Ubicación</h2>
+    <p>Nos encontramos en 123 Calle Principal, Ciudad, País, donde estaremos encantados de recibirte.</p>
+</div>
+
+<section class="apply">
+    <h2 class="section-heading">Formulario de Contacto</h2>
+    <form [formGroup]="applyForm" (submit)="submitApplication()">
+    <label for="first-name">Nombre</label>
+    <input id="first-name" type="text" formControlName="firstName" placeholder="Ingresa tu nombre"/>
+    <label for="email">Correo Electrónico</label>
+    <input id="email" type="email" formControlName="email" placeholder="Ingresa tu correo"/>
+    <label for="mensaje">Mensaje</label>
+    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+    <button type="submit" class="primary">Enviar Mensaje</button>
+    </form>
+</section>

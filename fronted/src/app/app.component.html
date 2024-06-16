@@ -1,0 +1,22 @@
+<div class="menu">
+  <div class="menu-cabecera">
+    <h1>Style Trend</h1>
+    <button routerLink="carrito" class="btn-primary">
+      <i class="bi bi-cart"></i>
+      <div class="badge bg-danger">
+        {{totalProducto}}
+      </div>
+    </button>
+  </div>
+  <div class="topnav">
+    <a [routerLink]="['inicio']" [routerLinkActive]="['active']">Inicio</a>
+    <!-- <a [routerLink]="['tienda']" [routerLinkActive]="['active']">Tienda</a> -->
+    <a [routerLink]="['nosotros']" [routerLinkActive]="['active']">Nosotros</a>
+    <a [routerLink]="['contactanos']" [routerLinkActive]="['active']">Contactanos</a>
+    <a [routerLink]="['registro']" [routerLinkActive]="['active']">Registro</a>
+  </div>
+</div>
+
+
+
+<router-outlet />

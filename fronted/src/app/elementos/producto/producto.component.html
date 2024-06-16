@@ -1,0 +1,15 @@
+<div class="contenedor-producto">
+    <div class="contenedor-imagen">
+        <img src="{{producto.image}}" alt=""> 
+    </div>
+    <div>
+        <h3 class="titulo">{{producto.title}}</h3> 
+        <span class="clasificacion-titulo">Clasificación:
+        </span><span>{{producto.rating.rate}}</span> </div>
+    <div>
+    <span>Precio:</span><span>{{producto.price}}</span> </div>
+    <div class="botones">
+        <a class="boton" [routerLink]="['/detalles', producto.id]">Ver detalles</a>
+        <button class="btn btn-primary boton" (click)="addToCart(producto)">Agrega a carrito</button>
+    </div>
+</div>  

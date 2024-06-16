@@ -1,0 +1,25 @@
+.mission-vision {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.mission-vision section {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    width: 50%;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.values ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.values ul li {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    margin: 1rem;
+    padding: 2rem;
+    width: 25%;
+}

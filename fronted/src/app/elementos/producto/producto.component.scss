@@ -1,0 +1,67 @@
+.contenedor-producto{
+    width: 35vh;
+    height: 70vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    padding: 25px;
+    margin: 1rem;
+    z-index: -1;
+    img{
+        position: relative;
+        height: 35vh; 
+        width: 35vh;
+        left: -25px;
+        top: -25px;
+        padding: 4vh;
+        background-color: white;
+    } 
+    h3{
+        font-weight: bolder;
+        height: 10vh;
+    }
+    .titulo {
+        font-size: 1.2em;
+        color: #333;
+        margin: 10px 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+      }
+    .clasificacion-titulo{
+        font-weight: bolder; 
+    }
+}
+
+.botones {
+    position: relative;
+    width: 35vh;
+    height: 10vh;
+    left: -25px;
+    background-color: rgba($color: #04AA6D, $alpha: .1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: .5rem;
+}
+
+.boton {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #04AA6D;
+}
+
+.btn {
+    background-color: #04AA6D;
+    color: white;
+    border-radius: unset;
+    border: unset;
+}
+
+a {
+    text-decoration: none;
+}

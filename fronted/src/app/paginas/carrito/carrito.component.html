@@ -1,0 +1,60 @@
+<ng-container *ngIf="productos.length != 0" >
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>sr.no</th>
+                            <th>Nombre del producto</th>
+                            <th>Imagen del Producto</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let item of productos; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.title}}</td>
+                        <td><img src="{{item.image}}" alt=""></td>
+                        <td style="width: 25%;">{{item.description}}</td>
+                        <th style="width: 12%;">{{item.price}}</th>
+                        <td style="width: 12%;">1</td>
+                        <td style="width: 12%;">{{item.price}}</td>
+                        <td>
+                            <button (click)="removerProducto(item)" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td><button (click)="vaciarCarrito()" class="btn btn-danger">Vaciar carrito</button></td>
+                        <td><button routerLink="/tienda" class="btn btn-primary">Ir a tienda</button></td>
+                        <td><button class="btn btn-success">Comprar</button></td>
+                        <td> <strong>Total : ${{total}}</strong> </td>
+                    </tr>
+                    
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="productos.length == 0">
+    <div class="contenedor">
+        <div class="card">
+            <h5 class="card-title">Mi carrito</h5>
+        </div>
+        <div class="center">
+            <img src="https://www.liderlogo.es/wp-content/uploads/2023/04/e-commerce-que-es-Lluvia-Digital.jpg" alt="imagen de agregacion online de productos a comprar">
+            <h4>Carrito vacio</h4>
+            <h6>Agrega productos a tu carrito</h6>
+            <button routerLink="/tienda" class="btn btn-primary">Ir a tienda</button>
+        </div>
+    </div>
+</ng-container>
+

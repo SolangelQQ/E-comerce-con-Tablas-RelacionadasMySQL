@@ -1,0 +1,16 @@
+.contenedor-detalle{ 
+    display: flex; 
+    justify-content: center; 
+    .imagen{
+        padding: 15px; 
+        flex-basis: 20%; 
+        img{
+            display: block;
+            max-width: 100%; 
+        }
+    } 
+    .descripcion{
+    padding: 15px;
+    flex-basis: 40%; 
+    }
+}

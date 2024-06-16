@@ -1,0 +1,14 @@
+<!-- <app-producto [producto]="producto" ></app-producto> -->
+<div class="contenedor-productos"> 
+    
+    @for (producto of listaDeProductos; track producto.id){
+    <div>
+        <app-producto [producto] ="producto"></app-producto>  
+        <!-- <button class="btn btn-primary">Agrega a carrito</button> -->
+    </div>
+
+    } @empty {
+        <p>No existen productos</p>
+    }
+    
+</div>
