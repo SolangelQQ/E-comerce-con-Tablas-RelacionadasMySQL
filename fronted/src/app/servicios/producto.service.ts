@@ -7,8 +7,9 @@ import { OnInit } from '@angular/core';
   providedIn: 'root'
 })
 export class ProductoService {
-  url = 'http://localhost:3000/products';
-  constructor( private http: HttpClient ){}
+  private url = '/api/products';
+
+  constructor(private http: HttpClient) { }
 
   agregarProducto(product: Product){
     return this.http.post<Product>(this.url, product);
