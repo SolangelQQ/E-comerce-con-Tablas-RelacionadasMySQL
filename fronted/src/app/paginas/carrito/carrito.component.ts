@@ -28,4 +28,17 @@ export class CarritoComponent implements OnInit{
   vaciarCarrito(){
     this.carritoService.vaciarCarrito();
   }
+
+  comprar() {
+    const date = new Date().toISOString().split('T')[0]; // Format the date as 'YYYY-MM-DD'
+    this.carritoService.comprar(date).subscribe(
+      res => {
+        console.log('Cart saved successfully');
+        this.vaciarCarrito();
+      },
+      error => {
+        console.error('Failed to save cart', error);
+      }
+    );
+  }
 }

@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../interfaces/product';
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class CarritoService {
+  
   public carritoList: Product[] = []
   public productList = new BehaviorSubject<Product[]>([]);
 
-  constructor() { 
-  }
+  constructor(private http: HttpClient) { }
+
   obtenerProductos(){
     return this.productList.asObservable();
   }
@@ -44,5 +46,14 @@ export class CarritoService {
     this.carritoList = []
     this.productList.next(this.carritoList);
     
+  }
+
+  comprar(date: string) {
+    const products = this.carritoList.map(product => ({
+      productId: product.id,
+      quantity: 1
+    }));
+
+    return this.http.post('/api/carts', date );
   }
 }
