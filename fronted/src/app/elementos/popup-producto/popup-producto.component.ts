@@ -21,10 +21,8 @@ export class PopupProductoComponent {
     description: '',
     category: '',
     image: '',
-    rating: {
-      rate: 0,
-      count: 0
-    }
+    rating: 0,
+    ratingCount: 0
   };
 
   agregarProducto() {

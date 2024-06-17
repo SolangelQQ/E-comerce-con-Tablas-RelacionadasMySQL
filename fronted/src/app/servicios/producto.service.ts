@@ -7,7 +7,7 @@ import { OnInit } from '@angular/core';
   providedIn: 'root'
 })
 export class ProductoService {
-  url = 'https://fakestoreapi.com/products';
+  url = 'http://localhost:3000/products';
   constructor( private http: HttpClient ){}
 
   agregarProducto(product: Product){
@@ -15,9 +15,7 @@ export class ProductoService {
   }
    
   obtenerTodosLosProductos(): Observable<Product[]>{ 
-    return this.http.get<Product[]>(this.url).pipe(
-      map(productos => productos)  
-    )
+    return this.http.get<Product[]>(this.url) 
   }
   obtenerProductoPorId(id: number){
     return this.http.get<Product>(this.url+'/'+id) 
